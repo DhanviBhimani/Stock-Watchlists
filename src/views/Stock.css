@@ -1,0 +1,56 @@
+.stockSearch {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 200px 300px 300px 300px;
+    column-gap: 20px;
+}
+
+.stockHeader {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+    margin: auto;
+    text-align: center;
+}
+
+.dailyInfo {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    margin: 0;
+}
+
+.preMarketInfo {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    margin: 0;
+}
+
+.bookInfo {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    margin: 0;
+}
+
+.tradingInfo {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    margin: 0;
+}
+
+.buttonInfo {
+    text-align: center;
+}
+
+.stockSearch p {
+    color: #737886;
+}
+
+
+@media (max-width: 700px) {
+    .stockSearch {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}

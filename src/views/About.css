@@ -1,0 +1,98 @@
+.about {
+    display: grid;
+    margin: auto;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 1200px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Soft gradient */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Deeper shadow for prominence */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.about h1 {
+    font-size: 2.2rem; /* Bigger and bold headline */
+    color: #2e4053; /* Darker text for contrast */
+    font-weight: 700;
+}
+
+.about h3 {
+    text-decoration: none; /* Removed underline for cleaner look */
+    color: #3498db; /* Vibrant blue for headers */
+    font-size: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.about h3::after {
+    content: '';
+    width: 50%;
+    height: 3px;
+    background: #3498db;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s;
+}
+
+.about h3:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
+
+.aboutInfo {
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Elevated shadow */
+    transition: transform 0.3s ease-in-out;
+}
+
+.aboutInfo:hover {
+    transform: translateY(-10px); /* Lift up on hover */
+}
+
+.aboutInfo p {
+    color: #636e72;
+    font-size: 1.1rem;
+}
+
+.stockPage, .searchPage, .watchlistPage, .settingsPage {
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.stockPage:hover, .searchPage:hover, .watchlistPage:hover, .settingsPage:hover {
+    transform: translateY(-10px) scale(1.05); /* Lift and slightly enlarge on hover */
+    background: linear-gradient(135deg, #f0f8ff, #e6f7ff); /* Light gradient on hover */
+}
+
+.stockPage h3, .searchPage h3, .watchlistPage h3, .settingsPage h3 {
+    font-size: 1.4rem;
+    color: #1abc9c; /* Soft green for section headers */
+}
+
+.stockPage p, .searchPage p, .watchlistPage p, .settingsPage p {
+    font-size: 1.1rem;
+    color: #555; /* Softer grey for text */
+}
+
+@media (max-width: 700px) {
+    .about {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .about h1 {
+        font-size: 1.8rem;
+    }
+
+    .about h3 {
+        font-size: 1.3rem;
+    }
+}

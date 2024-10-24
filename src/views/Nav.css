@@ -1,0 +1,111 @@
+/* Main Navigation Styling */
+.Nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1a1a2e; /* Sleek, dark background */
+    border-bottom: 2px solid #16213e; /* Subtle bottom border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Brand/App Name */
+.header h1 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Links Styling */
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links a {
+    color: #ffffff;
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.links a:hover {
+    background-color: #e94560;
+    color: #fff;
+}
+
+/* User Section */
+.user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user button {
+    background-color: #e94560;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.user button:hover {
+    background-color: #d43d56;
+}
+
+/* Hamburger Menu for Mobile */
+#hamburger {
+    display: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 900px) {
+    .links {
+        display: none;
+        flex-direction: column;
+        background-color: #1a1a2e;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 20px 0;
+        z-index: 10;
+    }
+
+    .links a {
+        padding: 15px 20px;
+        text-align: center;
+        border-top: 1px solid #333;
+    }
+
+    .Nav.nav-open .links {
+        display: flex;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    .user {
+        display: none; /* Hide user section on small screens */
+    }
+}
